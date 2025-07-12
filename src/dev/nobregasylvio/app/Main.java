@@ -5,13 +5,15 @@ import dev.nobregasylvio.app.entities.Smartphone;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Scanner scan = new Scanner(System.in);
         Smartphone smartphone = new Smartphone();
 
         int opcao;
         boolean continua = true;
 
+        System.out.println("Iniciando celular...");
+        Thread.sleep(1000);
         do {
             menuPrincipal();
             opcao = scan.nextInt();
@@ -33,6 +35,7 @@ public class Main {
                 }
                 default -> System.out.println("Opção inválida.");
             }
+            Thread.sleep(1000);
         } while(continua);
 
         scan.close();
@@ -75,7 +78,7 @@ public class Main {
         smartphone.ligar(telefone);
     }
 
-    public static void handleNavegador (Scanner scan, Smartphone smartphone) {
+    public static void handleNavegador (Scanner scan, Smartphone smartphone) throws InterruptedException {
         int opcaoNavegador;
         boolean continua = true;
 
@@ -96,10 +99,11 @@ public class Main {
                 }
                 default -> System.out.println("Opção inválida.");
             }
+            Thread.sleep(1000);
         } while (continua);
     }
 
-    public static void handleReprodutor (Scanner scan, Smartphone smartphone) {
+    public static void handleReprodutor (Scanner scan, Smartphone smartphone) throws InterruptedException {
         int opcaoReprodutor = 0;
         boolean continua = true;
 
@@ -120,6 +124,7 @@ public class Main {
                 }
                 default -> System.out.println("Opção inválida.");
             }
+            Thread.sleep(1000);
         } while (continua);
     }
 }
