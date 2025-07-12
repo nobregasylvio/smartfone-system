@@ -22,7 +22,7 @@ public class Smartphone implements ReprodutorMusical, AparelhoTelefonico, Navega
 
     @Override
     public void exibirPagina(String url) {
-        System.out.println("Exibindo Página" + url);
+        System.out.println("Exibindo Página: " + url);
     }
 
     @Override
